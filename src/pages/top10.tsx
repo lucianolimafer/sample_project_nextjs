@@ -14,11 +14,12 @@ export default function Top10 ({products}: Top10Props) {
         <div>
             <h1>Top 10</h1>
             <ul>
-                {console.log(products)}
                 {products.map(product => {
-                    <li key={product.id}>
-                        <h1>{product.title}</h1>
-                    </li>
+                    return (
+                        <li key={product.id}>
+                            {product.title}
+                        </li>
+                    );
                 })}
             </ul>
         </div>
